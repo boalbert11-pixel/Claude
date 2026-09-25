@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Title and description are replaced at load time from content.js. -->
+  <title>Founders Circle Career Fair · Indian Springs School</title>
+  <meta name="description" content="A student-run career fair at Indian Springs School featuring local and alumni entrepreneurs.">
+  <meta name="theme-color" content="#7B1E2E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%237B1E2E' stroke-width='5'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Announcement banner (toggle in content.js → announcement.show) -->
+  <div class="announce" id="announce" hidden></div>
+
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a class="wordmark" href="#top" id="wordmark">Founders Circle</a>
+
+      <nav class="nav__links" id="nav-links" aria-label="Primary">
+        <!-- Links are generated from content.js -->
+      </nav>
+
+      <div class="nav__actions">
+        <a class="btn btn--primary btn--sm" data-register="short">Register</a>
+        <button class="nav__toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 1. Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <p class="eyebrow reveal" id="hero-eyebrow"></p>
+        <h1 class="hero__title reveal" id="hero-title">Founders Circle Career Fair</h1>
+        <p class="hero__tagline reveal" id="hero-tagline"></p>
+
+        <dl class="hero__meta reveal">
+          <div class="meta">
+            <dt>Date</dt>
+            <dd id="hero-date"></dd>
+          </div>
+          <div class="meta">
+            <dt>Time</dt>
+            <dd id="hero-time"></dd>
+          </div>
+          <div class="meta meta--wide">
+            <dt>Location</dt>
+            <dd id="hero-location"></dd>
+          </div>
+        </dl>
+
+        <div class="hero__cta reveal">
+          <a class="btn btn--primary btn--lg" data-register="full">Register</a>
+          <a class="text-link" id="hero-secondary" href="#speakers">See who's coming <span aria-hidden="true">→</span></a>
+        </div>
+
+        <p class="updated reveal" id="last-updated" hidden></p>
+      </div>
+    </section>
+
+    <!-- 2. About -->
+    <section class="section section--border" id="about" aria-labelledby="about-title">
+      <div class="container about">
+        <h2 class="label" id="about-title">About</h2>
+        <div class="about__body reveal" id="about-body"></div>
+      </div>
+    </section>
+
+    <!-- 3. Featured entrepreneurs -->
+    <section class="section section--alt" id="speakers" aria-labelledby="speakers-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title" id="speakers-title">Featured entrepreneurs</h2>
+          <p class="section__intro" id="speakers-intro"></p>
+        </div>
+        <ul class="speakers" id="speakers-list" role="list"></ul>
+      </div>
+    </section>
+
+    <!-- 4. Agenda -->
+    <section class="section" id="agenda" aria-labelledby="agenda-title">
+      <div class="container agenda-wrap">
+        <div class="section__head reveal">
+          <h2 class="section__title" id="agenda-title">Agenda</h2>
+          <p class="section__intro" id="agenda-intro"></p>
+        </div>
+        <div id="agenda-body"></div>
+      </div>
+    </section>
+
+    <!-- 5. Stats strip -->
+    <section class="stats" id="stats" aria-label="At a glance">
+      <div class="container">
+        <ul class="stats__list" id="stats-list" role="list"></ul>
+      </div>
+    </section>
+
+    <!-- 6. FAQ -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-wrap">
+        <div class="section__head reveal">
+          <h2 class="section__title" id="faq-title">Frequently asked questions</h2>
+        </div>
+        <div class="faq" id="faq-list"></div>
+      </div>
+    </section>
+
+    <!-- 7. Final call to action -->
+    <section class="cta" id="register" aria-labelledby="cta-title">
+      <div class="container cta__inner reveal">
+        <h2 class="cta__title" id="cta-title">Come meet the founders.</h2>
+        <p class="cta__text" id="cta-text"></p>
+        <p class="cta__when" id="cta-when"></p>
+        <a class="btn btn--light btn--lg" data-register="full">Register</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- 8. Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <p class="footer__club" id="footer-club">Founders Circle</p>
+        <p class="footer__school" id="footer-school">Indian Springs School</p>
+      </div>
+      <div class="footer__meta">
+        <p id="footer-contact"></p>
+        <p id="footer-copy"></p>
+      </div>
+    </div>
+  </footer>
+
+  <noscript>
+    <p class="noscript">This page needs JavaScript turned on to show event details.</p>
+  </noscript>
+
+  <!-- All editable text lives in content.js -->
+  <script src="content.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
